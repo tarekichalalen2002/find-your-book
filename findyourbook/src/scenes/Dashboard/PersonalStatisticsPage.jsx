@@ -1,7 +1,7 @@
-import BookPlans from "../../components/BookPlans";
+import PersonalStatistics from "../../components/PersonalStatistics";
 import Sidebar from "../../components/Sidebar";
 
-const BookPlansPage = () => {
+const PersonalStatisticsPage = () => {
     return(
         <body className="flex justify-center">
         <div 
@@ -14,10 +14,10 @@ const BookPlansPage = () => {
         items-centere"
         >
             <Sidebar/>
-            <BookPlans/>
+            <PersonalStatistics/>
     </div>
     </body>
     )
 }
 
-export default BookPlansPage;
+export default PersonalStatisticsPage;

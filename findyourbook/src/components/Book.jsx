@@ -2,7 +2,8 @@ import Header from "./Header"
 import {BsStarHalf , BsStarFill} from "react-icons/bs"
 import { useState } from "react";
 import { useSelector } from "react-redux";
-
+import {AiFillCheckCircle , AiOutlineCheckCircle,AiFillFileAdd,AiOutlineFileAdd} from "react-icons/ai";
+import {GrAmazon} from "react-icons/gr"
 const Book = () => {
     const state = useSelector((state) => state);
     const darkMode = (state.mode === "dark");
@@ -35,8 +36,13 @@ const Book = () => {
 
     const [coloredStarsOnHover,setColoredStarsOnHover] = useState(0);
     const [coloredStarsOnClick , setColoredStarsOnClick] = useState(0);
+    const [isRatingToggled , setIsRatingToggled] = useState(false);
+    const [isReadHidden , setIsReadHidden] = useState(true);
+    const [isAddHidden , setIsAddHidden] =useState(true);
+    const [isBuyHidden , setIsBuyHidden] = useState(true);
+    const [isAddedClicked , setIsAddedClicked] = useState(false);
 
-    
+
     return(
     <section
         className="sm:w-4/6 h-full absolute right-0 w-11/12
@@ -134,10 +140,80 @@ const Book = () => {
                     </div>
                 </div>
             </div>
+            {/* buttons */}
+            
+            <div
+            className={`flex w-full flex-col sm:flex-row justify-around p-5 gap-5 mt-4
+            sm:gap-2`}
+            >
+                <button
+                className={`text-3xl flex flex-row items-center gap-2
+                w-auto sm:w-1/3
+                ${darkMode ? "text-gray-200" :"text-gray-700" }
+                `}
+                onMouseOver={() => setIsReadHidden(false)}
+                onMouseLeave={() => setIsReadHidden(true)}
+                onClick={() => setIsRatingToggled(!isRatingToggled)}
+                >
+                {isRatingToggled ? <AiFillCheckCircle/> : <AiOutlineCheckCircle/>}
+                {isRatingToggled ? 
+                <span
+                className={`text-xl`}
+                >Already read</span>: 
+                <span
+                className={` ease-in-out duration-300
+                ${isReadHidden ? "opacity-0 translate-x-[-20%]":"opacity-100 translate-x-0"}
+                text-xl`}
+                >
+                    Already read ?
+                </span>}
+                </button>
+                <button
+                className={`text-3xl flex flex-row items-center gap-2
+                w-auto sm:w-1/3
+                ${darkMode ? "text-gray-200" :"text-gray-700" }
+                `}
+                onMouseOver={() => setIsAddHidden(false)}
+                onMouseLeave={() => setIsAddHidden(true)}
+                onClick={() => setIsAddedClicked(!isAddedClicked)}
+                >
+                {isAddedClicked ? <AiFillFileAdd/> : <AiOutlineFileAdd/>}
+                {isAddedClicked ? 
+                <span
+                className={`text-xl`}
+                >Added</span>:  
+                <span
+                className={` ease-in-out duration-300
+                ${isAddHidden ? "opacity-0 translate-x-[-20%]":"opacity-100 translate-x-0"}
+                text-xl`}
+                >
+                    Add to collection?
+                </span>}
+                </button>
+                <button
+                className={`text-3xl flex flex-row items-center gap-2
+                w-auto sm:w-1/3
+                ${darkMode ? "text-gray-200" :"text-gray-700" }
+                `}
+                onMouseOver={() => setIsBuyHidden(false)}
+                onMouseLeave={() => setIsBuyHidden(true)}
+                >
+                <GrAmazon/>
+                <span
+                className={` ease-in-out duration-300
+                ${isBuyHidden ? "opacity-0 translate-x-[-20%]":"opacity-100 translate-x-0"}
+                text-xl`}
+                >
+                    Buy ?
+                </span>
+                </button>
+            </div>
 
             <div
-            className="w-full h-[50px] mt-5 flex flex-col
-            gap-5"
+            className={`w-full h-[50px] mt-5 flex flex-col
+            gap-5
+            ${isRatingToggled ? "" :"hidden"}
+            `}
             >
                 <h1 
                 className={`text-2xl font-semibold 

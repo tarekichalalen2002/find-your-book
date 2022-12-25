@@ -85,7 +85,7 @@ const Sidebar = () => {
         
                     <a href="/users/:id/explore"><div 
                     className={`grid grid-cols-2 relative items-center
-                    ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+                    ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
                     "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
                     opacity-75                 
                     hover:bg-slate-400 
@@ -99,9 +99,9 @@ const Sidebar = () => {
                     "><AiOutlineRight /></h1>
                     </div></a>
         
-                    <a href="/users/:id/categories"><div 
+                    <a href="/users/:id/globalStatistics"><div 
                     className={`grid grid-cols-2 relative items-center
-                    ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+                    ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
                     "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
                     opacity-75                 
                     hover:bg-slate-400 
@@ -109,7 +109,7 @@ const Sidebar = () => {
                     ease-in-out duration-300 translate-x-0 hover:translate-x-5
                     hover:rounded-lg`}
                     >
-                    <h1 className="text-xl">Categories</h1>
+                    <h1 className="text-xl">Global Statistics</h1>
                     <h1 className="absolute right-2
                     text-xs
                     "><AiOutlineRight /></h1>
@@ -117,7 +117,7 @@ const Sidebar = () => {
         
                     <a href="/users/:id/saved"><div 
                     className={`grid grid-cols-2 relative items-center
-                    ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+                    ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
                     "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
                     opacity-75                 
                     hover:bg-slate-400 
@@ -133,7 +133,7 @@ const Sidebar = () => {
         
                     <a href="/users/:id/bookplans"><div 
                     className={`grid grid-cols-2 relative items-center
-                    ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+                    ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
                     "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
                     opacity-75                 
                     hover:bg-slate-400 
@@ -149,7 +149,7 @@ const Sidebar = () => {
         
                     <a href="/users/:id/preferences"><div 
                     className={`grid grid-cols-2 relative items-center
-                    ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+                    ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
                     "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
                     opacity-75                 
                     hover:bg-slate-400 
@@ -237,7 +237,7 @@ const Sidebar = () => {
 
             <a href="/users/:id/explore"><div 
             className={`grid grid-cols-2 relative items-center
-            ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+            ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
             "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
             opacity-75                 
             hover:bg-slate-400 
@@ -251,9 +251,9 @@ const Sidebar = () => {
             "><AiOutlineRight /></h1>
             </div></a>
 
-            <a href="/users/:id/categories"><div 
+            <a href="/users/:id/globalStatistics"><div 
             className={`grid grid-cols-2 relative items-center
-            ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+            ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
             "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
             opacity-75                 
             hover:bg-slate-400 
@@ -261,7 +261,7 @@ const Sidebar = () => {
             ease-in-out duration-300 translate-x-0 hover:translate-x-5
             hover:rounded-lg`}
             >
-            <h1 className="text-xl">Categories</h1>
+            <h1 className="text-xl">Global Statistics</h1>
             <h1 className="absolute right-2
             text-xs
             "><AiOutlineRight /></h1>
@@ -269,7 +269,7 @@ const Sidebar = () => {
 
             <a href="/users/:id/saved"><div 
             className={`grid grid-cols-2 relative items-center
-            ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+            ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
             "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
             opacity-75                 
             hover:bg-slate-400 
@@ -285,7 +285,7 @@ const Sidebar = () => {
 
             <a href="/users/:id/bookplans"><div 
             className={`grid grid-cols-2 relative items-center
-            ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+            ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
             "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
             opacity-75                 
             hover:bg-slate-400 
@@ -301,7 +301,7 @@ const Sidebar = () => {
 
             <a href="/users/:id/preferences"><div 
             className={`grid grid-cols-2 relative items-center
-            ${darkMode ? "text-gray-100 hover:text-blue-300 hover:bg-slate-600" : 
+            ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
             "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
             opacity-75                 
             hover:bg-slate-400 

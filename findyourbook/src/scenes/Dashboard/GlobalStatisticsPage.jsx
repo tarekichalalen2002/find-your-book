@@ -1,7 +1,7 @@
+import GlobalStatistics from "../../components/GlobalStatistics";
 import Sidebar from "../../components/Sidebar";
-import Saved from "../../components/Saved";
 
-const SavedPage = () => {
+const GlobalStatisticsPage = () => {
     return(
         <div className="flex justify-center">
         <div 
@@ -14,10 +14,10 @@ const SavedPage = () => {
         "
         >
             <Sidebar/>
-            <Saved/>
+            <GlobalStatistics/>
         </div>
     </div>
     )
 }
 
-export default SavedPage;
+export default GlobalStatisticsPage;

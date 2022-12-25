@@ -1,13 +1,13 @@
 import Header from "./Header"
 
 
-const Categories = () => {
+const PersonalStatistics = () => {
     return(
     <section
         className="sm:w-4/6 h-full absolute right-0 w-11/12
         p-7 ">
-    <Header title="Categories"/>
+    <Header title="Book Plans"/>
     </section>
     )}
 
-export default Categories;
+export default PersonalStatistics;

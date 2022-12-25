@@ -4,9 +4,9 @@ import { useSelector } from "react-redux";
 import LoginPage from "./scenes/LoginPage/LoginPage"
 import ExplorePage from './scenes/Dashboard/ExplorePage';
 import HomePage from "./scenes/Dashboard/HomePage";
-import CategoriesPage from "./scenes/Dashboard/CategoriesPage";
+import GlobalStatisticsPage from "./scenes/Dashboard/GlobalStatisticsPage";
 import SavedPage from "./scenes/Dashboard/SavedPage";
-import BookPlansPage from "./scenes/Dashboard/BookPlansPage";
+import PersonalStatisticsPage from "./scenes/Dashboard/PersonalStatisticsPage";
 import PreferencesPage from "./scenes/Dashboard/PreferencesPage";
 import BookPage from "./scenes/Dashboard/BookPage";
 import { useDispatch } from "react-redux"
@@ -30,9 +30,9 @@ function App() {
           <Route path='/' element={<LoginPage/>}/>
           <Route path='/users/:id/explore' element={<ExplorePage/>} />
           <Route path="/users/:id/home" element={<HomePage/>}/>
-          <Route path="/users/:id/categories" element={<CategoriesPage/>}/>
+          <Route path="/users/:id/globalStatistics" element={<GlobalStatisticsPage/>}/>
+          <Route path="/users/:id/personalStatistics" element={<PersonalStatisticsPage/>}/>
           <Route path="/users/:id/saved" element={<SavedPage/>}/>
-          <Route path="/users/:id/bookplans" element={<BookPlansPage/>}/>
           <Route path="/users/:id/preferences" element={<PreferencesPage/>}/>
           <Route path="/books/:id" element={<BookPage/>} />
         </Routes>
