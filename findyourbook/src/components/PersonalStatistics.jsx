@@ -2,12 +2,12 @@ import Header from "./Header"
 import { useSelector } from "react-redux";
 import { CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
-import { Pie , Line } from "react-chartjs-2";
 import {Chart as ChartJS} from "chart.js/auto"
+import Charts from "./Chart"
 
 import {personalBooksLiked , colors ,personalBooksRead , visitsPerMonth , likesPerMonth} from "./data.js"
 
-
+const {PieChart , LineChart} = Charts;
 const PersonalStatistics = () => {
     const state = useSelector((state) => state);
     const darkMode = (state.mode === "dark");
@@ -61,14 +61,6 @@ const PersonalStatistics = () => {
                 borderWidth: 3,
             }
         ],
-    }
-
-    const PieChart = ({Chartdata}) => {
-        return <Pie data={Chartdata} />
-    }
-
-    const LineChart = ({Chartdata}) => {
-        return <Line data={Chartdata} />
     }
 
     return(

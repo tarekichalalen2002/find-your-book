@@ -190,7 +190,6 @@ const Home = () => {
             >
                 <div
                 className={`w-full 
-                ${darkMode ? "bg-slate-700" : "bg-slate-200"}
                 rounded-lg shadow-lg flex flex-col
                 px-4 py-3 h-[40vh]`}
                 >
@@ -200,8 +199,7 @@ const Home = () => {
                     pl-4 font-semibold mb-6 sm:mb-0 h-10`}
                     >Recent Books: </h1>
                     <div
-                    className={`w-full h-3/4  
-                    ${darkMode ? "bg-slate-600" :"bg-slate-100"}
+                    className={`w-full h-3/4
                     shadow-lg
                     rounded-lg flex flex-col gap-3 p-1 pb-20 overflow-y-scroll scroll whitespace-nowrap
                     scroll-smooth`}
@@ -214,7 +212,6 @@ const Home = () => {
 
                 <div
                 className={`w-full 
-                ${darkMode ? "bg-slate-700" : "bg-slate-200"}
                 rounded-lg shadow-lg flex flex-col
                 px-4 py-3 h-[40vh]`}>
                     <h1
@@ -224,8 +221,7 @@ const Home = () => {
                     >Your Followers: </h1>
 
                     <div
-                    className={`w-full h-3/4  
-                    ${darkMode ? "bg-slate-600" :"bg-slate-100"}
+                    className={`w-full h-3/4
                     shadow-lg
                     rounded-lg flex flex-col gap-3 p-1 pb-20 overflow-y-scroll scroll whitespace-nowrap
                     scroll-smooth`}>
@@ -237,7 +233,10 @@ const Home = () => {
 
                 </div>
             </div>
+
+            
         </section>
+        <div className="w-full h-[100px]"></div>
     </section>
     )}
 

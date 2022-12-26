@@ -1,5 +1,4 @@
 import {BrowserRouter as Router,Navigate ,Routes,Route} from "react-router-dom"
-import {useMemo} from "react";
 import { useSelector } from "react-redux";
 import LoginPage from "./scenes/LoginPage/LoginPage"
 import ExplorePage from './scenes/Dashboard/ExplorePage';
@@ -9,10 +8,8 @@ import SavedPage from "./scenes/Dashboard/SavedPage";
 import PersonalStatisticsPage from "./scenes/Dashboard/PersonalStatisticsPage";
 import PreferencesPage from "./scenes/Dashboard/PreferencesPage";
 import BookPage from "./scenes/Dashboard/BookPage";
-import { useDispatch } from "react-redux"
-import { setLogin, setLogout, setMode } from "./state";
 import {useEffect} from "react";
-
+import AuthorPage from "./scenes/Dashboard/AuthorPage"
 
 function App() {
   const state = useSelector((state) => state);
@@ -28,6 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LoginPage/>}/>
           <Route path='/users/:id/explore' element={<ExplorePage/>} />
+          <Route path="/authors/:id" element={<AuthorPage/>} />
           <Route path="/users/:id/home" element={<HomePage/>}/>
           <Route path="/users/:id/globalStatistics" element={<GlobalStatisticsPage/>}/>
           <Route path="/users/:id/personalStatistics" element={<PersonalStatisticsPage/>}/>

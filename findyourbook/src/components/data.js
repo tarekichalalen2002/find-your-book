@@ -61,6 +61,13 @@ const bookVisitsPerMonth = [
     ["May","360"],
     ["June","460"]
 ]
+const authorBooksRates = [
+    ["Crime and Punishement","4.8"],
+    ["The Double and the Gambler","4.3"],
+    ["The Brothers Karamazov","4.6"],
+    ["The Crocodile","3.8"]
+]
+
 
 module.exports ={categoriesGlobalStats , colors, categoriesReaders ,personalBooksRead , personalBooksLiked,visitsPerMonth,
-likesPerMonth , bookVisitsPerMonth};
+likesPerMonth , bookVisitsPerMonth , authorBooksRates};

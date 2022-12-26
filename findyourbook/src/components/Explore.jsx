@@ -136,9 +136,9 @@ const Explore = () => {
                 >Books For You:</h1>
                 <div
                 className={`w-full 
-                ${darkMode ? "bg-slate-600" :"bg-slate-200"}
+                
                 min-h-[48vh] grid grid-flow-col
-                p-3 gap-3 rounded-lg shadow-xl overflow-x-scroll scroll whitespace-nowrap
+                p-3 gap-3 rounded-lg shadow-xl overflow-auto hover:overflow-x-scroll whitespace-nowrap
                 scroll-smooth pb-6`}
                 >
                     {/* BOOKS SCROLL BAR */}
@@ -154,9 +154,8 @@ const Explore = () => {
                 >Most Popular:</h1>
                 <div
                 className={`w-full 
-                ${darkMode ? "bg-slate-600" :"bg-slate-200"}
                 min-h-[48vh] grid grid-flow-col
-                p-3 gap-3 rounded-lg shadow-xl overflow-x-scroll scroll whitespace-nowrap
+                p-3 gap-3 rounded-lg shadow-xl overflow-x-scroll overflow-hidden scroll
                 scroll-smooth pb-6`}
                 >
                     {/* BOOKS SCROLL BAR */}

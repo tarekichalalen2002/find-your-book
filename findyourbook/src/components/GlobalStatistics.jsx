@@ -2,9 +2,11 @@ import Header from "./Header"
 import {CircularProgressbar} from 'react-circular-progressbar';
     import 'react-circular-progressbar/dist/styles.css';
 import { useSelector } from "react-redux";
-import { Pie } from "react-chartjs-2";
+import Charts from "./Chart"
 import {Chart as ChartJS} from "chart.js/auto"
 import {categoriesGlobalStats , colors ,categoriesReaders} from "./data.js"
+
+const {PieChart} = Charts;
 
 const GlobalStatistics = () => {
     const state = useSelector((state) => state);
@@ -23,9 +25,6 @@ const GlobalStatistics = () => {
         ],
     }
 
-    const PieChart = ({Chartdata}) => {
-        return <Pie data={Chartdata} />
-    }
 
 
     const Statbar = () =>{

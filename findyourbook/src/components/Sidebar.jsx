@@ -29,7 +29,7 @@ const Sidebar = () => {
             text-gray-700 opacity-70 hover:opacity-100
             shadow-xl rounded mt-7
             bg-slate-300 w-10 h-10 flex justify-center
-            items-center
+            items-center z-40
             `}
             onClick={() => setMenuToggled(true)}
             >

@@ -30,13 +30,13 @@ const Saved = () => {
             <div
             className={`w-[28vh] flex flex-col gap-3 items-center px-2 pt-2 pb-3
             rounded-xl shadow-xl ease-in-out duration-300
-            ${darkMode ? "bg-slate-600 hover:bg-slate-700" : "bg-slate-200 hover:bg-slate-300"}
+            ${darkMode ? "hover:bg-slate-700" : " hover:bg-slate-300"}
             cursor-pointer
             `}
             >
                 <img 
                 src="https://edit.org/photos/img/blog/t9i-edit-book-covers-online.jpg-840.jpg"
-                className={`w-2/3 rounded-lg shadow-md`}  
+                className={`w-2/3 rounded-sm shadow-md`}  
                 alt="" />
                 <div>
                 <h1 
