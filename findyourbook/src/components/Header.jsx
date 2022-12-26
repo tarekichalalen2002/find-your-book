@@ -28,7 +28,7 @@ const Header = ({title}) => {
         `}
         >
             <div 
-            className={`flex flex-row items-center ease-in-out duration-500 ${!isSearchToggled ? "w-10" : "w-full px-10"}`}
+            className={`flex flex-row items-center ease-in-out duration-500 ${!isSearchToggled ? "w-10" : "w-1/2 px-10"}`}
             
             onMouseOver={() => setIsSearchToggled(true)}
             onMouseOut={() => setIsSearchToggled(false)}
@@ -50,7 +50,7 @@ const Header = ({title}) => {
             </div>
             <h1 
             className={`text-3xl font-semibold  
-            ${!smallScreen && "w-1/2"}
+            ${!smallScreen ? "w-1/2" : "w-1/2"}
             ${darkMode ? "text-gray-200" : "text-gray-700" }`}
             >{title}</h1>
             

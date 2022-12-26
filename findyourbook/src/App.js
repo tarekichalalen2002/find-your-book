@@ -17,7 +17,6 @@ import {useEffect} from "react";
 function App() {
   const state = useSelector((state) => state);
   const darkMode = (state.mode === "dark");
-  console.log(state);
   useEffect(() => {
     darkMode ? document.body.style.backgroundColor = "#1e293b" : document.body.style.backgroundColor = "#f1f5f9";
   }, [darkMode]);

@@ -4,6 +4,10 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import {AiFillCheckCircle , AiOutlineCheckCircle,AiFillFileAdd,AiOutlineFileAdd} from "react-icons/ai";
 import {GrAmazon} from "react-icons/gr"
+import {  Line } from "react-chartjs-2";
+import {Chart as ChartJS} from "chart.js/auto"
+import {colors, bookVisitsPerMonth } from "./data";
+
 const Book = () => {
     const state = useSelector((state) => state);
     const darkMode = (state.mode === "dark");
@@ -42,6 +46,22 @@ const Book = () => {
     const [isBuyHidden , setIsBuyHidden] = useState(true);
     const [isAddedClicked , setIsAddedClicked] = useState(false);
 
+    const visitsPerMonth = {
+        labels:bookVisitsPerMonth.map((category) => category[0]),
+        datasets:[
+            {
+                label:"Visits per month",
+                data:bookVisitsPerMonth.map((category) => category[1]),
+                backgroundColor:colors.slice(1),
+                borderColor: darkMode ? "#f1f5f9" : "#1e293b" ,
+                borderWidth: 3,
+            }
+        ],
+    }
+
+    const LineChart = ({Chartdata}) => {
+        return <Line data={Chartdata} />
+    }
 
     return(
     <section
@@ -409,10 +429,28 @@ const Book = () => {
             </div>
             
             <div
-            className="w-full h-[50px] mt-5"
+            className={`flex flex-col gap-7 mt-7`}
             >
-                
+                <h1
+                className={`text-2xl font-semibold 
+                ${darkMode ? "text-slate-200" : "text-slate-800"}`}
+                >Visits Statistics: </h1>
+                <div
+                className="flex flex-col items-center self-center w-full
+                sm:w-3/4 gap-5"
+                >
+                    <LineChart Chartdata={visitsPerMonth} />
+                    <h1
+                    className={`text-base sm:text-xl font-semibold 
+                    ${darkMode ? "text-slate-200" : "text-slate-800"}
+                    text-center`}
+                    >Visits Per Month</h1>
+                </div>
             </div>
+
+            <div
+            className="w-full h-[100px]"
+            ></div>
             
 
         </section>

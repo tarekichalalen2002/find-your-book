@@ -23,4 +23,44 @@ const categoriesReaders = [
     ["others","631"]
 ]
 
-module.exports ={categoriesGlobalStats , colors, categoriesReaders};
+const personalBooksRead = [
+    ["computerScience","8"],
+    ["technology","5"],
+    ["psychology","2"],
+]
+
+const personalBooksLiked = [
+    ["computerScience","6"],
+    ["technology","3"],
+    ["psychology","2"],
+]
+
+const visitsPerMonth = [
+    ["January","20"],
+    ["February","17"],
+    ["March","8"],
+    ["April","24"],
+    ["May","15"],
+    ["June","22"]
+]
+
+const likesPerMonth = [
+    ["January","5"],
+    ["February","1"],
+    ["March","6"],
+    ["April","6"],
+    ["May","3"],
+    ["June","9"]
+]
+
+const bookVisitsPerMonth = [
+    ["January","500"],
+    ["February","154"],
+    ["March","453"],
+    ["April","750"],
+    ["May","360"],
+    ["June","460"]
+]
+
+module.exports ={categoriesGlobalStats , colors, categoriesReaders ,personalBooksRead , personalBooksLiked,visitsPerMonth,
+likesPerMonth , bookVisitsPerMonth};

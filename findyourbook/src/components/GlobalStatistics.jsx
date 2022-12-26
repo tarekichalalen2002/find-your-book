@@ -1,6 +1,6 @@
 import Header from "./Header"
 import {CircularProgressbar} from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+    import 'react-circular-progressbar/dist/styles.css';
 import { useSelector } from "react-redux";
 import { Pie } from "react-chartjs-2";
 import {Chart as ChartJS} from "chart.js/auto"
@@ -14,7 +14,7 @@ const GlobalStatistics = () => {
         labels:categoriesReaders.map((category) => category[0]),
         datasets:[
             {
-                label:"Readers by Category",
+                label:"Books you read by categorie",
                 data:categoriesReaders.map((category) => category[1]),
                 backgroundColor:colors.slice(1),
                 borderColor: darkMode ? "#1e293b":"#f1f5f9" ,
@@ -129,7 +129,7 @@ const GlobalStatistics = () => {
                       
                     <h1
                     className={`text-base text-center w-2/3`}
-                    >Books rated more than 3 stars</h1>
+                    >Books saled among visited</h1>
                 </div>
             </div>
             <div className="py-10">

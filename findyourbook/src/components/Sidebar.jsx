@@ -131,7 +131,7 @@ const Sidebar = () => {
                     "><AiOutlineRight /></h1>
                     </div></a>
         
-                    <a href="/users/:id/bookplans"><div 
+                    <a href="/users/:id/personalStatistics"><div 
                     className={`grid grid-cols-2 relative items-center
                     ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
                     "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
@@ -141,7 +141,7 @@ const Sidebar = () => {
                     ease-in-out duration-300 translate-x-0 hover:translate-x-5
                     hover:rounded-lg`}
                     >
-                    <h1 className="text-xl">Book Plans</h1>
+                    <h1 className="text-xl">Personal Statistics</h1>
                     <h1 className="absolute right-2
                     text-xs
                     "><AiOutlineRight /></h1>
@@ -283,7 +283,7 @@ const Sidebar = () => {
             "><AiOutlineRight /></h1>
             </div></a>
 
-            <a href="/users/:id/bookplans"><div 
+            <a href="/users/:id/personalStatistics"><div 
             className={`grid grid-cols-2 relative items-center
             ${darkMode ? "text-gray-100 hover:text-blue-700 hover:bg-slate-600" : 
             "text-gray-600 hover:text-blue-900 hover:bg-slate-400"}
@@ -293,7 +293,7 @@ const Sidebar = () => {
             ease-in-out duration-300 translate-x-0 hover:translate-x-5
             hover:rounded-lg`}
             >
-            <h1 className="text-xl">Book Plans</h1>
+            <h1 className="text-xl">Personal Statistics</h1>
             <h1 className="absolute right-2
             text-xs
             "><AiOutlineRight /></h1>
